@@ -1,0 +1,16 @@
+version: '3.9'
+
+services:
+  php_rh_v80_ws:
+    image: php_rh_v80_ws:1.0.0
+    build: .
+    stdin_open: true # docker run -i
+    tty: true # docker run -t
+    volumes:
+      - $PWD/user_data:/home/user
+    ports:
+      - 9700:8000
+      - 9701:8001
+      - 9702:8002
+      - 9703:8003
+      - 9704:8004
